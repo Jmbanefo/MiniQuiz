@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>MiniQuiz</title>
-</head>
-<body>
-    <div class="timer">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>MyMiniQuiz</title>
+  </head>
+  <body>
+    <div class="startbox"><button id="begin">Start your quiz</button></div>
+    <div class="explainBox">
+      <h1 id="welcome">Welcome to the Quiz!!</h1>
+      <div>
+        <h2 id="info">Info:</h2>
+        <p id="info">You'll have 30 seconds to complete your quiz.</p>
+        <p id="info">After you have finished make sure to record your score!</p>
+        <p id="info">If you are feeling confident then feel free to give it another go!</p>
+      </div>
     </div>
+
+    <!-- This is the quiz box -->
     <div class="quizbox">
-        
-        
+      <h1 id="quest">Quiz Question</h1>
+      <button class="option">Option 1</button>
+      <button class="option">Option 2</button>
+      <button class="option">Option 3</button>
+      <button class="option">Option 4</button>
     </div>
+
+    <!-- This is the timer -->
+    <div class="timer">
+      <h2 id="timeLeft">Seconds left:</h2>
+      <div class="secs">15</div>
+    </div>
+
+    <!-- This keeps track of my score -->
     <div class="highscore">
-
+      <h2>Highscore: XXXX</h2>
     </div>
 
-    
-</body>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>

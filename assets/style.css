@@ -1,0 +1,81 @@
+:root{background: sandybrown;}
+*{ margin: 0; padding: 0; text-align: center;}
+
+/* Start box styling */
+.startbox{margin-top: 15px;}
+
+#begin{
+    background-color: rgb(255, 225, 1);
+    color: rgb(54, 161, 136);
+    cursor: help;
+    padding: 15px;
+    border-radius: 15px}
+
+
+h1{
+font-size: 30px;
+margin-bottom: 15px;}
+
+
+
+/* Quizbox styling */
+.quizbox{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    margin: 40px 200px;
+    padding: 20px;
+    border-style: dashed;
+    width: 600px;
+    margin-left: 28%;
+    /* display: none; */
+}
+
+.explainBox{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    margin: 40px 200px;
+    padding: 20px;
+    border-style: dashed;
+    width: 600px;
+    margin-left: 28%;
+
+}
+
+.option{
+    margin: 3px ;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.quizbox .option button{
+  padding: 20px;
+}
+
+
+.timer{
+    display: flex;
+    margin-left: 15px;
+}
+
+.secs{
+    font-size: 60px;
+}
+
+.highscore{
+    background-color: burlywood;
+    border: 5px;
+    border-style: dashed;
+    margin-top: 30px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+
+
+/* Look into appendChild() */
+/* User innerHTML to change contents and keep the same structure
+/*Use display none while point to element and display block to bring back
