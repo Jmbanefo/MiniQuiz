@@ -13,7 +13,7 @@
       <h1 id="welcome">Welcome to the Quiz!!</h1>
       <div>
         <h2 id="info">Info:</h2>
-        <p id="info">You'll have 30 seconds to complete your quiz.</p>
+        <p id="info">You'll have 60 seconds to complete your quiz.</p>
         <p id="info">After you have finished make sure to record your score!</p>
         <p id="info">If you are feeling confident then feel free to give it another go!</p>
       </div>
@@ -22,21 +22,25 @@
     <!-- This is the quiz box -->
     <div class="quizbox">
       <h1 id="quest">Quiz Question</h1>
-      <button class="option">Option 1</button>
-      <button class="option">Option 2</button>
-      <button class="option">Option 3</button>
-      <button class="option">Option 4</button>
+      <button class="option" id="opt1">Option 1</button>
+      <button class="option" id="opt2">Option 2</button>
+      <button class="option" id="opt3">Option 3</button>
+      <button class="option" id="opt4">Option 4</button>
     </div>
+    <!-- <a href="" class="nextpage" -->
+
 
     <!-- This is the timer -->
     <div class="timer">
       <h2 id="timeLeft">Seconds left:</h2>
-      <div class="secs">15</div>
+      <div class="secs">60</div>
     </div>
 
     <!-- This keeps track of my score -->
     <div class="highscore">
-      <h2>Highscore: XXXX</h2>
+        <input type="text" name="username" placeholder="Enter Username" id="topscore">
+        <button class="enter">Submit Score</button>
+        <h2>Highscore: XXXX</h2>
     </div>
 
     <script src="./assets/script.js"></script>

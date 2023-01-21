@@ -20,7 +20,6 @@ margin-bottom: 15px;}
 
 /* Quizbox styling */
 .quizbox{
-    display: flex;
     flex-direction: column;
     background-color: aliceblue;
     margin: 40px 200px;
@@ -28,7 +27,7 @@ margin-bottom: 15px;}
     border-style: dashed;
     width: 600px;
     margin-left: 28%;
-    /* display: none; */
+    display: none; 
 }
 
 .explainBox{
