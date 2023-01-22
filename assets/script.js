@@ -16,8 +16,7 @@ const record = document.querySelector("#highscore")
 const alphaScore = document.querySelector("#topscore")
 let score = 0
 let timercount = 60
-
-
+//Array of question objects
 const questions = [
     {
         question: "How does this even work?",
@@ -25,7 +24,7 @@ const questions = [
         choice2: "I will never know",
         choice3: "I am working to figure that out",
         choice4: "Give up",
-        answer: 3,
+        answer: "I am working to figure that out",
     },
 
     {
@@ -34,7 +33,7 @@ const questions = [
         choice2: "I tried",
         choice3: "Patience is a virture",
         choice4: "Lost me",
-        answer: 1,
+        answer: "Absolutely"
     }
 ]
     function clock() {
@@ -62,10 +61,10 @@ const questions = [
 
     // get the choice you want to put in button Question 1
     let questionTitle = questions[0].question
-    let choice1 = questions[0].choice1;
-    let choice2 = questions[0].choice2; 
-    let choice3 = questions[0].choice3;
-    let choice4 = questions[0].choice4; 
+    let incorrect1 = questions[0].choice1;
+    let incorrect2 = questions[0].choice2; 
+    let answer3 = questions[0].choice3;
+    let incorrect4 = questions[0].choice4; 
     // get the choice you want to put in button Question 2
     let questionTitle2 = questions[1].question
     let choice01 = questions[1].choice1;
@@ -74,35 +73,40 @@ const questions = [
     let choice04 = questions[1].choice4; 
     // put it in the button you want it in
     title.innerHTML = questionTitle
-    questionEL1.innerHTML = choice1;
-    questionEL2.innerHTML = choice2; 
-    questionEL3.innerHTML = choice3; 
-    questionEL4.innerHTML = choice4
+    questionEL1.innerHTML = incorrect1;
+    questionEL2.innerHTML = incorrect2; 
+    questionEL3.innerHTML = answer3; 
+    questionEL4.innerHTML = incorrect4
 
+                    //Old adding on 
+                    // title.innerHTML = questionTitle2
+                    // questionEL1.innerHTML = choice01;
+                    // questionEL2.innerHTML = choice02; 
+                    // questionEL3.innerHTML = choice03; 
+                    // questionEL4.innerHTML = choice04; 
+
+    function checkme(e) {
+
+        userchoice = e.target.id
+        console.log(userchoice)
         
-    function checkme() {
-
-        if(choice3){
-        console.log("Good guess")
-        score++; 
-        console.log(score)
-        //    New Question 
-        title.innerHTML = questionTitle2
-        questionEL1.innerHTML = choice01;
-        questionEL2.innerHTML = choice02; 
-        questionEL3.innerHTML = choice03; 
-        questionEL4.innerHTML = choice04; 
+        for (let index = 0; index < questions.length; index++) {
+            // const element = array[index];
+            questions[index].innerHTML
+        
+            if(userchoice===questionEL3){
+            console.log("Good guess")
+            score++; 
+            console.log(score)
+            //    New Question 
+            }
+            else { 
+            console.log("You answered incorrectly")
+    
         }
-    
-    
-        else { 
-        console.log("You answered incorrectly")
-        title.innerHTML = questionTitle2
-        //    New Question 
-        questionEL1.innerHTML = choice01;
-        questionEL2.innerHTML = choice02; 
-        questionEL3.innerHTML = choice03; 
-        questionEL4.innerHTML = choice04; 
+            
+
+
     }
 }
 
@@ -118,6 +122,7 @@ questionEL4.addEventListener("click", checkme)
 //Need to continue with buttons
 
 //Need Local Storage create new page? 
+// get item & put item  - Json parse makes object that looks like string 
 function recordKeeper() {
 
 }
