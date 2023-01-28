@@ -17,45 +17,45 @@ const record = document.querySelector("#highscore")
 const endscore = document.querySelector("#yours")
 const alphaScore = document.querySelector("#topscore")
 const myId = document.querySelector("#yourId")
+const final = document.querySelector("#toptier")
 const kingbtn = document.querySelector(".enter")
 let score = 0
 let timercount = 60
 //Array of question objects
 const questions = [
     {
-        question: "How does this even work?",
+        question: "How do you select a class or id on HTML from Javascript?",
         choice1: "I have no idea",
         choice2: "I will never know",
-        choice3: "I am working to figure that out",
+        choice3: "document.querySelector",
         choice4: "Give up",
-        answer: "I am working to figure that out",
     },
 
     {
-        question: "Did you figure it out?",
-        choice1: "Absolutely",
+        question: "How do you display text on HTML from Javascript?",
+        choice1: "variable.innerHTML",
         choice2: "I tried",
-        choice3: "Patience is a virture",
+        choice3: "buttons buttons buttons",
         choice4: "Lost me",
-        answer: "Absolutely",
+
     },
 
     {
-        question: "Have you got the grit?",
-        choice1: "I was born in the dark",
-        choice2: "I can do all things",
-        choice3: "I'm a noodle",
+        question: "How do you set information into local storage?",
+        choice1: "Can i think about it?",
+        choice2: "localStorage.setItem",
+        choice3: "ask google",
         choice4: "I can't do it",
-        answer: "I can do all things",
+
     },
     
     {
-        question: "Are you satisfied?",
-        choice1: "Definitely",
+        question: "How do you pull information from local storage?",
+        choice1: "localStorage.getItem",
         choice2: "I can do more",
         choice3: "Patience is a virture",
         choice4: "nope",
-        answer: "Definitely",
+
     }
 
 ]
@@ -73,7 +73,12 @@ const questions = [
                 console.log(score)
             }}, 1000)
 }
-   
+
+let last = localStorage.getItem("TopScore")
+myId.innerHTML = last;
+let tier1 = localStorage.getItem("Score")
+toptier.innerHTML = tier1
+
 start.addEventListener("click", iStart)
     function iStart() {
         console.log("clicked")
@@ -84,8 +89,6 @@ start.addEventListener("click", iStart)
         info2.style.display = "none"
         quizsection.style.display = "flex"
         
-        let last = localStorage.getItem("TopScore")
-        myId.innerHTML = last;
 
 
         // get the choice you want to put in button Question 1
@@ -130,8 +133,7 @@ start.addEventListener("click", iStart)
         // userchoice
         userchoice = e.target.id
         console.log("User choice: " + userchoice)
-        // Answers
-        console.log("You want this: " + questionEL3.id)
+
             
     if(counter===0){
         if(userchoice == questionEL3.id){
@@ -188,13 +190,13 @@ moveon.addEventListener("click", display)
 // get item & put item  - Json parse makes object that looks like string 
 function recordKeeper() {
 
-    var king = document.querySelector("#topscore").value + score;
+    var king = document.querySelector("#topscore").value;
 
     
     if (!king) { 
         return;
     }
-    myId.textContent = king + " ~ " + score;
+    myId.textContent = king + " ~ " +  " Yours vs High: " + score;
     king = localStorage.getItem("yourId");
 
 }
@@ -209,6 +211,7 @@ kingbtn.addEventListener("click", function(event) {
             }
             else{
             localStorage.setItem("TopScore", king)
+            localStorage.setItem("Score", score)
             recordKeeper();
             }
   });

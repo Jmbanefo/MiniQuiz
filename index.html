@@ -14,10 +14,9 @@
       <div>
         <h2 id="info">Info:</h2>
         <p id="info">You'll have 60 seconds to complete your quiz.</p>
+        <p id="info">For every incorrect answer 5 seconds will subtracted.</p>
         <p id="info">After you have finished make sure to record your score!</p>
-        <p id="info">
-          If you are feeling confident then feel free to give it another go!
-        </p>
+        <p id="info">If you are feeling confident then feel free to give it another go!</p>
       </div>
     </div>
 
@@ -28,9 +27,10 @@
       <button class="option" id="opt2">Option 2</button>
       <button class="option" id="opt3">Option 3</button>
       <button class="option" id="opt4">Option 4</button>
-      <button class="next">Skip</button>
+      <button class="next"> Skip</button>
     </div>
     <!-- <a href="" class="nextpage" -->
+
 
     <!-- This is the timer -->
     <div class="timer">
@@ -40,16 +40,12 @@
 
     <!-- This keeps track of my score -->
     <div class="highscore">
-      <input
-        type="text"
-        name="username"
-        placeholder="Enter Username"
-        id="topscore"
-      />
-      <button class="enter">Submit Score</button>
-      <h2>Highscore: <span id="yourId">X</span></h2>
-      <h2>Your Score: <span id="yours">0</span></h2>
+        <input type="text" name="username" placeholder="Enter Username" id="topscore">
+        <button class="enter">Submit Score</button>
+        <h2>Highscore: <span id="yourId">X</span> <span id="toptier"></span></h2>
+        <h2>Your Score: <span id="yours">0</span></h2>
     </div>
+
 
     <script src="./assets/script.js"></script>
   </body>
